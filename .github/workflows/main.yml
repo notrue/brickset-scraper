@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Telegram Notify
-      uses: appleboy/telegram-action@0.0.3
+      uses: appleboy/telegram-action@master
       with:
         to: 655705266
         token: 1038880264:AAGi3Gc0GwC1OiRm_3ADAMI-R9p_rAS1YqM
