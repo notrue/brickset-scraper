@@ -1,4 +1,4 @@
-name: CI
+name: Telegram notification
 
 on: [push]
 
@@ -12,8 +12,7 @@ jobs:
     - name: Telegram Notify
       uses: appleboy/telegram-action@master
       with:
-        to: 655705266
-        token: 1038880264:AAGi3Gc0GwC1OiRm_3ADAMI-R9p_rAS1YqM
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
         args: |
           The ${{ github.event_name }} event triggered first step.
-          echo ${{ secrets.TELEGRAM_TO }}
