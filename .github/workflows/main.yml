@@ -12,7 +12,7 @@ jobs:
     - name: Telegram Notify
       uses: appleboy/telegram-action@master
       with:
-        to: -1001414132454
+        to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         args: |
-          The ${{ github.event_name }} event triggered first step.
+          ${{ github.actor }} performed ${{ github.event_name }} on ${{ github.repository }}.
