@@ -16,4 +16,4 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         args: |
           ${{ github.actor }} performed ${{ github.event_name }} on ${{ github.repository }}:
-          ${{ github.event_path }}
+          ${{ github.ref }}
